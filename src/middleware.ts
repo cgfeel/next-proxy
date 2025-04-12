@@ -5,6 +5,7 @@ const allowedOrigins = ['http://localhost:8088']
 const corsOptions = {
   'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
   'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+  'Access-Control-Allow-Credentials': 'true'
 }
 
 export function middleware(request: NextRequest) {
