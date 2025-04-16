@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-const allowedOrigins = ['http://localhost:8088']
+const origins = process.env.CORS_ORIGINS;
+const allowedOrigins = origins ? origins.split(',').map(item => item.trim()) : [];
  
 const corsOptions = {
   'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
